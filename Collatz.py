@@ -24,19 +24,6 @@ def collatz_read(s):
 # collatz_eval
 # ------------
 
-def collatz_compute(n):
-    assert isinstance(n, int)
-    assert n > 0
-    cycle = 1
-    while n > 1:
-        if (n % 2) == 0 :
-            n = (n / 2)
-        else:
-            n = (3 * n) + 1
-        cycle += 1
-    # assert cycle > 0
-    return cycle
-
 
 def collatz_eval(i, j):
     """
@@ -44,14 +31,8 @@ def collatz_eval(i, j):
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
-    max_cycles = 0
-    for a in range(i, j+1):
-        current = collatz_compute(a)
-        if current > max_cycles:
-            max_cycles = current   
-    return max_cycles
-
-
+    # <your code>
+    return 1
 
 # -------------
 # collatz_print
