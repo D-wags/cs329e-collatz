@@ -1,0 +1,117 @@
+commit f30ea1205c8f8fe72815965214ac180beb9cd82f
+Merge: 8aed60e 01261f7
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 22:08:42 2017 -0600
+
+    Merge branch 'master' into dev
+
+commit 01261f77f96ca22361c6c8d2f4c61e7678dbb60d
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 22:08:23 2017 -0600
+
+    sphere
+
+commit 23f9b76ceef08d21fbfdae82c44269b654e7f50a
+Merge: 9608da8 8aed60e
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 20:27:15 2017 -0600
+
+    Merge branch 'dev'
+
+commit 8aed60e84aca9695e3d9401623d4b1eec86aa816
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 20:22:03 2017 -0600
+
+    added units
+
+commit 2472e00ab48732e17d237e3e81ff0cd751a38532
+Merge: 0f58657 9608da8
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 19:26:10 2017 -0600
+
+    Merge branch 'master' into dev
+
+commit 0f586576979693389077a179aac6bef52856fd07
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 19:25:45 2017 -0600
+
+    fixed unit tests
+
+commit 9608da84b783b0e2dc1c45442360bb9bf6b770cf
+Merge: 23fc8a5 c004b3b
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 08:44:09 2017 -0600
+
+    Merge branch 'dev'
+
+commit c004b3b85b513610f52aa1fcb7f5913c58bf0823
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Thu Jan 26 08:39:21 2017 -0600
+
+    fixed CollatzCompute fxn
+
+commit 6527ff0a828be44eb60db309f0cf11f92538c775
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Jan 25 18:45:47 2017 -0600
+
+    makefile adjust
+
+commit 8e5b02914148efa2ed06d9ed73eb1ddb8277cb1c
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Jan 25 18:40:02 2017 -0600
+
+    make travis work
+
+commit 79000beca3a3fd4777ba4b630d4b69038ec9942a
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Jan 25 15:43:25 2017 -0600
+
+    push
+
+commit d1616e1da5b4a9791d8679825dcdf1f476b6f329
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Tue Jan 24 20:39:10 2017 -0600
+
+    altered makefile
+
+commit 272bfc42fb4bcc9140ea235fa8632bd910be8bc9
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Tue Jan 24 19:13:09 2017 -0600
+
+    fie remove?
+
+commit 88cadcc9e5eb42a7f96d8c21d7c3cbdc2b7f34fd
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Jan 23 19:48:36 2017 -0600
+
+    removed folders
+
+commit d74f01d8ec220766ac370b61c6f241015fdbd9ef
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Jan 23 19:23:48 2017 -0600
+
+    added collate compute
+
+commit 0261c6ed61c84d97cf4d96ca83cc95b6ab9f23c3
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Jan 23 17:51:33 2017 -0600
+
+    travis.yml update
+
+commit f533728b3f3f07316b50680bdc09668f8c0d0cb4
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sun Jan 22 19:09:29 2017 -0600
+
+    commit travis.yml
+
+commit 23fc8a50a0bfca2a286365fc0616684725b3296a
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sun Jan 22 18:43:22 2017 -0600
+
+    code copied from public repo
+
+commit 5969486c90a662a441f06defdfd47e90a423903e
+Author: D-wags <drew_wagner@utexas.edu>
+Date:   Sun Jan 22 14:53:38 2017 -0600
+
+    Initial commit
