@@ -25,7 +25,7 @@ def collatz_read(s):
 # ------------
 
 def collatz_compute(n):
-
+    assert isinstance(n, int)
     assert n > 0
     cycle = 1
     while n > 1:
@@ -34,6 +34,8 @@ def collatz_compute(n):
         else:
             n = (3 * n) + 1
         cycle += 1
+    assert n == 1
+    assert cycle > 0
     return cycle
 
 
