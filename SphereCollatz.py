@@ -16,26 +16,6 @@
 
 import sys
 
-def makeCache(i, j):
-    if i > j:
-        i,j = j,i
-    masterList = []
-
-    x = i
-
-    while x <= j:
-        span = []
-        span.append(x)
-        x += 1000
-        if x > j:
-            x = j
-        span.append(x)
-    masterList.append(span)
-    return (masterList)
-
-
-
-
 
 
 def collatz_read(s):
@@ -47,26 +27,62 @@ def collatz_read(s):
     a = s.split()
     return [int(a[0]), int(a[1])]
 
+
+def checkCache(dicty, nbr):
+    if nbr not in dicty:
+        cycle = collatz_compute(nbr, dicty)
+        dicty[nbr] = cycle
+        return cycle
+    else:
+        cycle = dicty[nbr]
+        return cycle
+    
 # ------------
 # collatz_eval
 # ------------
 
-def collatz_compute(n):
-    assert isinstance(n, int)
+def collatz_compute(n, the_cache):
+    #assert isinstance(n, int)
     assert n > 0
     cycle = 1
     while n > 1:
-        if (n%2) == 0:
-            n = (n / 2)
+        if n in the_cache:
+            cycle += the_cache[n] - 1
+            return cycle
+        elif (n%2) == 0:
+            #the_cache[n] = cycle
+            n = (n // 2)
+            cycle += 1
         else:
-            n = (3 * n) + 1
-        cycle += 1
+            #the_cache[n] = cycle
+            # checkCache(the_cache, n)
+            n = ((3 * n) + 1)//2
+            cycle += 2
     assert n == 1
     assert cycle > 0
     return cycle
 
+def collatz_eval(i, j):
+    """
+    i the beginning of the range, inclusive
+    j the end       of the range, inclusive
+    return the max cycle length of the range [i, j]
+    """
+    # <your code>
+    # assert j > i
+    if i > j:
+        i,j = j,i
+    
+    max_cycles = 0
+    for a in range(i, j + 1):
+        #current = collatz_compute(a)
+        current = checkCache(the_cache, a)
+        if current > max_cycles:
+            max_cycles = current
+    return max_cycles
 
-def collatz_eval(twodlist):
+
+# def collatz_eval(twodlist):
     """
     i the beginning of the range, inclusive
     j the end       of the range, inclusive
@@ -82,15 +98,15 @@ def collatz_eval(twodlist):
     # if i > j:
     #     i,j = j,i
 
-    for slist in twodlist:
-        i = slist[0]
-        j = slist[1]
-        max_cycles = 0
-        for a in range(i, j + 1):
-            current = collatz_compute(a)
-            if current > max_cycles:
-                max_cycles = current
-        return max_cycles
+    # for slist in twodlist:
+    #     i = slist[0]
+    #     j = slist[1]
+    #     max_cycles = 0
+    #     for a in range(i, j + 1):
+    #         current = collatz_compute(a)
+    #         if current > max_cycles:
+    #             max_cycles = current
+    #     return max_cycles
 
 # -------------
 # collatz_print
@@ -112,12 +128,18 @@ def collatz_print(w, i, j, v):
 # -------------
 
 
-def collatz_solve(r, w):
+
+
+def collatz_solve(r, w, the_cache):
     """
     r a reader
     w a writer
     """
     for s in r:
+
+        if not s.strip():
+            continue
+
         i, j = collatz_read(s)
         v = collatz_eval(i, j)
         collatz_print(w, i, j, v)
@@ -126,10 +148,12 @@ def collatz_solve(r, w):
 
 # ----
 # main
-# ----
+
 
 if __name__ == "__main__":
-    collatz_solve(sys.stdin, sys.stdout)
+    the_cache = {}
+    collatz_solve(sys.stdin, sys.stdout, the_cache)
+
 
 """ #pragma: no cover
 % cat RunCollatz.in
