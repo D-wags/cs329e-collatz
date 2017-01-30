@@ -17,7 +17,6 @@
 import sys
 
 
-
 def collatz_read(s):
     """
     read two ints
@@ -82,32 +81,6 @@ def collatz_eval(i, j):
     return max_cycles
 
 
-# def collatz_eval(twodlist):
-    """
-    i the beginning of the range, inclusive
-    j the end       of the range, inclusive
-    return the max cycle length of the range [i, j]
-    """
-    # <your code>
-
-    # for p in range(i, j):
-    #     if
-
-
-    # assert j > i
-    # if i > j:
-    #     i,j = j,i
-
-    # for slist in twodlist:
-    #     i = slist[0]
-    #     j = slist[1]
-    #     max_cycles = 0
-    #     for a in range(i, j + 1):
-    #         current = collatz_compute(a)
-    #         if current > max_cycles:
-    #             max_cycles = current
-    #     return max_cycles
-
 # -------------
 # collatz_print
 # -------------
@@ -126,8 +99,6 @@ def collatz_print(w, i, j, v):
 # -------------
 # collatz_solve
 # -------------
-
-
 
 
 def collatz_solve(r, w, the_cache):
