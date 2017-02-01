@@ -1,3 +1,57 @@
+commit 7bce2587ec7f24eeca44ed6c7b651494a15cf447
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Feb 1 16:10:03 2017 -0600
+
+    Improved Coverage
+
+commit be9a875d1faff71aafc505c71b56f8158607b24a
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Feb 1 15:45:24 2017 -0600
+
+    modified unit tests
+
+commit 90a2d7b62633a9be39f75f5de3c83c933029f2bc
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Wed Feb 1 15:27:30 2017 -0600
+
+    added more unit tests
+
+commit 6ca343105f1e98119ff5665981b4b171118cab13
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Tue Jan 31 21:24:10 2017 -0600
+
+    ran autopep8
+
+commit 5423c77bf00d05773a31ce9facac3d6d96b5f08d
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Tue Jan 31 18:57:10 2017 -0600
+
+    Transferred Sphere code closes #13
+
+commit 947b8c0b5dbf67399224caa2742fe326b1b1acf3
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Mon Jan 30 15:46:45 2017 -0600
+
+    more tests/cleaned up SphereCollatz fixes #10 #11
+
+commit 5661d0d7d8866e579b33f1b94c25e6c3a4f8171d
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sun Jan 29 21:16:41 2017 -0600
+
+    added > 100 lines of acceptance tests
+
+commit fe58ee756e58af66551d2714baae8b632c4fda1d
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Sun Jan 29 01:11:05 2017 -0600
+
+    passed sphere
+
+commit d65a0224f5757c4365f4723014ed90b5bc62e391
+Author: Drew Wagner <drew_wagner@utexas.edu>
+Date:   Fri Jan 27 10:20:30 2017 -0600
+
+    made all test cases passable
+
 commit f30ea1205c8f8fe72815965214ac180beb9cd82f
 Merge: 8aed60e 01261f7
 Author: Drew Wagner <drew_wagner@utexas.edu>
