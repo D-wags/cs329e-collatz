@@ -21,9 +21,19 @@
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-collatz_compute"><strong>collatz_compute</strong></a>(n)</dt></dl>
- <dl><dt><a name="-collatz_eval"><strong>collatz_eval</strong></a>(i, j)</dt><dd><tt>i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
-j&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+<td width="100%"><dl><dt><a name="-check_cache"><strong>check_cache</strong></a>(nbr, the_cache)</dt><dd><tt>reads&nbsp;in&nbsp;cycle&nbsp;cache&nbsp;and&nbsp;current&nbsp;number&nbsp;(the_cache,&nbsp;nbr)<br>
+and&nbsp;checks&nbsp;for&nbsp;number&nbsp;in&nbsp;cache,&nbsp;if&nbsp;present&nbsp;gets&nbsp;cycle&nbsp;<br>
+length&nbsp;for&nbsp;number&nbsp;<br>
+else&nbsp;runs&nbsp;collatz_compute&nbsp;and&nbsp;adds&nbsp;to&nbsp;cache<br>
+return&nbsp;cycle&nbsp;length</tt></dd></dl>
+ <dl><dt><a name="-collatz_compute"><strong>collatz_compute</strong></a>(n, the_cache)</dt><dd><tt>reads&nbsp;in&nbsp;number&nbsp;n&nbsp;and&nbsp;dictionary&nbsp;the_cache<br>
+if&nbsp;nbr&nbsp;is&nbsp;even&nbsp;divide&nbsp;by&nbsp;2<br>
+if&nbsp;odd&nbsp;multiply&nbsp;by&nbsp;3&nbsp;and&nbsp;add&nbsp;1<br>
+repeat&nbsp;until&nbsp;1&nbsp;and&nbsp;record&nbsp;number&nbsp;of&nbsp;iterations&nbsp;(cycles)<br>
+use&nbsp;cache&nbsp;to&nbsp;store&nbsp;cycles<br>
+return&nbsp;cycle&nbsp;length</tt></dd></dl>
+ <dl><dt><a name="-collatz_eval"><strong>collatz_eval</strong></a>(i, j, the_cache)</dt><dd><tt>i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+j&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
 return&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length&nbsp;of&nbsp;the&nbsp;range&nbsp;[i,&nbsp;j]</tt></dd></dl>
  <dl><dt><a name="-collatz_print"><strong>collatz_print</strong></a>(w, i, j, v)</dt><dd><tt>print&nbsp;three&nbsp;ints<br>
 w&nbsp;a&nbsp;writer<br>
