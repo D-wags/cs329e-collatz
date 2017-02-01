@@ -21,36 +21,76 @@ def collatz_read(s):
     return [int(a[0]), int(a[1])]
 
 # ------------
-# collatz_eval
+# check_cache
 # ------------
 
-def collatz_compute(n):
-    assert isinstance(n, int)
+
+def check_cache(nbr, the_cache):
+    """
+    reads in cycle cache and current number (the_cache, nbr)
+    and checks for number in cache, if present gets cycle 
+    length for number 
+    else runs collatz_compute and adds to cache
+    return cycle length
+
+    """
+    if nbr not in the_cache:
+        cycle = collatz_compute(nbr, the_cache)
+        the_cache[nbr] = cycle
+        return cycle
+    else:
+        cycle = the_cache[nbr]
+        return cycle
+
+# ---------------
+# collatz_compute
+# ---------------
+
+
+def collatz_compute(n, the_cache):
+    """
+    reads in number n and dictionary the_cache
+    if nbr is even divide by 2
+    if odd multiply by 3 and add 1
+    repeat until 1 and record number of iterations (cycles)
+    use cache to store cycles
+    return cycle length
+
+    """
     assert n > 0
     cycle = 1
     while n > 1:
-        if (n%2) == 0:
-            n = (n / 2)
+        if n in the_cache:
+            cycle += the_cache[n] - 1
+            return cycle
+        elif (n % 2) == 0:
+            n = (n // 2)
+            cycle += 1
         else:
-            n = (3 * n) + 1
-        cycle += 1
+            n = ((3 * n) + 1) // 2
+            cycle += 2
     assert n == 1
     assert cycle > 0
     return cycle
 
+# ---------------
+# collatz_eval
+# ---------------
 
-def collatz_eval(i, j):
+
+def collatz_eval(i, j, the_cache):
     """
     i the beginning of the range, inclusive
-    j the end       of the range, inclusive
+    j the end of the range, inclusive
     return the max cycle length of the range [i, j]
     """
     # <your code>
-    assert j > i
-    
+    if i > j:
+        i, j = j, i
+
     max_cycles = 0
     for a in range(i, j + 1):
-        current = collatz_compute(a)
+        current = check_cache(a, the_cache)
         if current > max_cycles:
             max_cycles = current
     return max_cycles
@@ -80,7 +120,13 @@ def collatz_solve(r, w):
     r a reader
     w a writer
     """
+    the_cache = {}
+
     for s in r:
+
+        if not s.strip():
+            continue
+
         i, j = collatz_read(s)
-        v = collatz_eval(i, j)
+        v = collatz_eval(i, j, the_cache)
         collatz_print(w, i, j, v)

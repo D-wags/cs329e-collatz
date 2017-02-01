@@ -1,0 +1,37 @@
+....F..FF....
+======================================================================
+FAIL: test_eval_5 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 63, in test_eval_5
+    v = collatz_eval(333, 144)
+  File "/Users/Drew/Desktop/SoftwareEng/projects/cs329e-collatz/Collatz.py", line 49, in collatz_eval
+    assert j > i
+AssertionError
+
+======================================================================
+FAIL: test_eval_8 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 75, in test_eval_8
+    v = collatz_eval(0, 12)
+  File "/Users/Drew/Desktop/SoftwareEng/projects/cs329e-collatz/Collatz.py", line 53, in collatz_eval
+    current = collatz_compute(a)
+  File "/Users/Drew/Desktop/SoftwareEng/projects/cs329e-collatz/Collatz.py", line 29, in collatz_compute
+    assert n > 0
+AssertionError
+
+======================================================================
+FAIL: test_eval_9 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 79, in test_eval_9
+    v = collatz_eval(5, -1)
+  File "/Users/Drew/Desktop/SoftwareEng/projects/cs329e-collatz/Collatz.py", line 49, in collatz_eval
+    assert j > i
+AssertionError
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.475s
+
+FAILED (failures=3)
