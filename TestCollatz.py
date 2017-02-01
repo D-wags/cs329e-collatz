@@ -15,7 +15,8 @@
 from io import StringIO
 from unittest import main, TestCase
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve
+
+from Collatz import *
 
 # -----------
 # TestCollatz
@@ -82,6 +83,41 @@ class TestCollatz (TestCase):
     def test_eval_7(self):
         v = collatz_eval(375, 788, the_cache={})
         self.assertEqual(v, 171)
+
+
+    # ----------------------------
+    # collatz_compute helper function
+    # -----------------------------
+
+    def test_compute_1(self):
+        v = collatz_compute(1, the_cache={})
+        self.assertEqual(v, 1)
+
+    def test_compute_2(self):
+        v = collatz_compute(10, the_cache={})
+        self.assertEqual(v, 7)
+
+    def test_compute_3(self):
+        v = collatz_compute(17, the_cache={})
+        self.assertEqual(v, 13)
+
+    # ----------------------------
+    # collatz_compute helper function
+    # -----------------------------
+
+    def test_cache_1(self):
+        v =  check_cache(1, the_cache={})
+        self.assertEqual(v, 1)
+
+    def test_cache_2(self):
+        v = check_cache(10, the_cache={})
+        self.assertEqual(v, 7)
+
+    def test_cache_3(self):
+        v = check_cache(17, the_cache={})
+        self.assertEqual(v, 13)
+
+    
 
     # -----
     # print
