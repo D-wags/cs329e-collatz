@@ -30,7 +30,7 @@ def collatz_read(s):
 # check_cache
 # ------------
 
-def checkCache(dicty, nbr, the_cache):
+def checkCache(dicty, nbr):
     if nbr not in dicty:
         cycle = collatz_compute(nbr, dicty)
         dicty[nbr] = cycle
@@ -76,7 +76,7 @@ def collatz_eval(i, j, the_cache):
     
     max_cycles = 0
     for a in range(i, j + 1):
-        current = checkCache(the_cache, a, the_cache)
+        current = checkCache(the_cache, a)
         if current > max_cycles:
             max_cycles = current
     return max_cycles
